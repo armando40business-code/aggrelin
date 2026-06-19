@@ -267,6 +267,10 @@
   .magnetic{will-change:transform}
   .timeline .axisfill{position:absolute;left:0;top:0;width:2px;height:0;background:linear-gradient(var(--blood),var(--blood-2));box-shadow:0 0 10px var(--blood);transition:height .12s linear;z-index:1}
   .tl.lit::before{box-shadow:0 0 14px rgba(207,22,34,.6)}
+  /* === Echtes Event-Video als unterste Hero-Ebene === */
+  .herovideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.18;filter:grayscale(.18) contrast(1.05);transform:scale(1.18) translateY(-4%);pointer-events:none}
+  .herovideo-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(9,9,10,.9),rgba(9,9,10,.52) 50%,rgba(9,9,10,.26))}
+  @media(prefers-reduced-motion:reduce){.herovideo{display:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -420,6 +424,12 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <!-- Echtes Aggrelin-27-Footage (KI-geschnitten) als Hintergrund-Ebene; Clip 2/3 zum Tauschen siehe Kommentar -->
+  <video class="herovideo" autoplay muted loop playsinline preload="auto">
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/clipify/user_3FK0BDsnhvZ1McqUSOZldbhci4W/rhywmlvgyk-e4c1aa9657/5e9929d3-16be-4520-931b-448a2ff391d5/clips/clip_01.mp4" type="video/mp4">
+  </video>
+  <!-- Clip 2: .../clips/clip_02.mp4 · Clip 3: .../clips/clip_03.mp4 -->
+  <div class="herovideo-scrim"></div>
   <canvas id="spark"></canvas>
   <svg class="octagon" viewBox="0 0 100 100" aria-hidden="true">
     <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30"/>
