@@ -8,26 +8,25 @@
 <meta property="og:title" content="AGGRELIN — Cage Fight · MMA aus Bayern &amp; Österreich" />
 <meta property="og:description" content="Einer der Pioniere des süddeutschen MMA. Seit 2009. Rund 29 Galas. Sechs Städte, zwei Länder." />
 <meta property="og:type" content="website" />
-<link rel="canonical" href="https://aggrelin.com/" />
+<link rel="canonical" href="https://www.aggrelin.com/" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="author" content="Aggrelin UG (haftungsbeschränkt)" />
 <meta name="theme-color" content="#cf1622" />
 <meta name="geo.region" content="DE-BY" />
 <meta name="geo.placename" content="München" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" href="/aggrelin-icon.png" type="image/png" />
+<link rel="apple-touch-icon" href="/aggrelin-icon.png" />
 <meta property="og:site_name" content="AGGRELIN" />
-<meta property="og:url" content="https://aggrelin.com/" />
+<meta property="og:url" content="https://www.aggrelin.com/" />
 <meta property="og:locale" content="de_DE" />
-<meta property="og:image" content="https://aggrelin.com/og.png" />
+<meta property="og:image" content="https://www.aggrelin.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="AGGRELIN — Cage Fight, MMA aus Bayern und Österreich seit 2009" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AGGRELIN — Cage Fight · MMA aus Bayern &amp; Österreich" />
 <meta name="twitter:description" content="Einer der Pioniere des süddeutschen MMA. Seit 2009. Rund 29 Galas." />
-<meta name="twitter:image" content="https://aggrelin.com/og.png" />
+<meta name="twitter:image" content="https://www.aggrelin.com/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
@@ -92,6 +91,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{font-family:var(--display);font-size:1.55rem;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
   .brand .dot{width:9px;height:9px;background:var(--blood);transform:rotate(45deg);display:inline-block}
+  .brand .brand-logo{height:28px;width:auto;display:block}
   .nav-links{display:flex;gap:22px;align-items:center}
   .nav-links a{font-family:var(--head);text-transform:uppercase;font-size:.82rem;letter-spacing:.13em;color:var(--muted);transition:color .2s;font-weight:500}
   .nav-links a:hover{color:var(--ink)}
@@ -104,7 +104,7 @@
   .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 10%,#1a1417 0%,var(--bg) 55%)}
   .octagon{
     position:absolute;right:-13vw;top:50%;transform:translateY(-50%);
-    width:78vh;height:78vh;opacity:.5;pointer-events:none;
+    width:78vh;height:78vh;opacity:.12;pointer-events:none;
     animation:spin 90s linear infinite;
   }
   @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
@@ -257,20 +257,6 @@
     *{animation:none!important;transition:none!important}
     .hero h1 span,.reveal-seq>*,.reveal{opacity:1!important;transform:none!important}
   }
-  /* === Enhancements (Motion-Upgrade) === */
-  .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blood),var(--blood-2));z-index:3000;box-shadow:0 0 12px var(--blood)}
-  #spark{position:absolute;inset:0;z-index:0;pointer-events:none}
-  .hero h1.glowpulse{animation:hglow 3s ease-in-out infinite}
-  @keyframes hglow{0%,100%{filter:drop-shadow(0 0 0 rgba(207,22,34,0))}50%{filter:drop-shadow(0 0 26px rgba(207,22,34,.35))}}
-  .brand .dot{animation:dotpulse 2.2s ease-in-out infinite}
-  @keyframes dotpulse{0%,100%{box-shadow:0 0 0 0 rgba(207,22,34,.5)}50%{box-shadow:0 0 0 7px rgba(207,22,34,0)}}
-  .magnetic{will-change:transform}
-  .timeline .axisfill{position:absolute;left:0;top:0;width:2px;height:0;background:linear-gradient(var(--blood),var(--blood-2));box-shadow:0 0 10px var(--blood);transition:height .12s linear;z-index:1}
-  .tl.lit::before{box-shadow:0 0 14px rgba(207,22,34,.6)}
-  /* === Echtes Event-Video als unterste Hero-Ebene === */
-  .herovideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.18;filter:grayscale(.18) contrast(1.05);transform:scale(1.18) translateY(-4%);pointer-events:none}
-  .herovideo-scrim{position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(9,9,10,.9),rgba(9,9,10,.52) 50%,rgba(9,9,10,.26))}
-  @media(prefers-reduced-motion:reduce){.herovideo{display:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -278,13 +264,13 @@
   "@graph": [
     {
       "@type": ["SportsOrganization", "LocalBusiness"],
-      "@id": "https://aggrelin.com/#organization",
+      "@id": "https://www.aggrelin.com/#organization",
       "name": "Aggrelin",
       "alternateName": "Aggrelin Cage Fight",
       "legalName": "Aggrelin UG (haftungsbeschränkt)",
-      "url": "https://aggrelin.com/",
-      "logo": "https://aggrelin.com/apple-touch-icon.png",
-      "image": "https://aggrelin.com/og.png",
+      "url": "https://www.aggrelin.com/",
+      "logo": "https://www.aggrelin.com/apple-touch-icon.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Aggrelin ist eine der ersten MMA-Promotions Süddeutschlands. Seit 2009 veranstaltet Aggrelin Cage Fights – MMA, Kickboxen und Bavarian Boxing – in München, Rosenheim, Nürnberg, Starnberg, Ingolstadt, Stuttgart und Salzburg.",
       "foundingDate": "2009-04-09",
       "founder": { "@type": "Person", "name": "Heinz Einsiedler" },
@@ -293,13 +279,13 @@
       "telephone": "+49 152 17133762",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Gallmayerstraße 13",
-        "postalCode": "81669",
+        "streetAddress": "Einsteinstraße 71",
+        "postalCode": "81675",
         "addressLocality": "München",
         "addressRegion": "Bayern",
         "addressCountry": "DE"
       },
-      "geo": { "@type": "GeoCoordinates", "latitude": 48.1182, "longitude": 11.6028 },
+      "geo": { "@type": "GeoCoordinates", "latitude": 48.1297, "longitude": 11.6078 },
       "areaServed": [
         { "@type": "Country", "name": "Deutschland" },
         { "@type": "Country", "name": "Österreich" }
@@ -312,11 +298,11 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://aggrelin.com/#website",
-      "url": "https://aggrelin.com/",
+      "@id": "https://www.aggrelin.com/#website",
+      "url": "https://www.aggrelin.com/",
       "name": "AGGRELIN",
       "inLanguage": "de",
-      "publisher": { "@id": "https://aggrelin.com/#organization" }
+      "publisher": { "@id": "https://www.aggrelin.com/#organization" }
     }
   ]
 }
@@ -331,69 +317,69 @@
       "@type": "Event", "name": "Aggrelin 1", "startDate": "2009-04",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Münchens erste MMA-Cage-Veranstaltung.",
       "location": { "@type": "Place", "name": "Badeanstalt", "address": { "@type": "PostalAddress", "addressLocality": "München", "addressCountry": "DE" } },
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 2, "item": {
       "@type": "Event", "name": "Aggrelin 9", "startDate": "2015-12-13",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Erste MMA-Cage-Show in Rosenheim.",
       "location": { "@type": "Place", "name": "Ballhaus Rosenheim", "address": { "@type": "PostalAddress", "addressLocality": "Rosenheim", "addressCountry": "DE" } },
       "performer": [ { "@type": "Person", "name": "Alexander Poppeck" }, { "@type": "Person", "name": "Markus Grosse" } ],
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 3, "item": {
       "@type": "Event", "name": "Aggrelin 12", "startDate": "2016-05-29",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Erste große MMA-Veranstaltung Frankens.",
       "location": { "@type": "Place", "name": "Löwensaal", "address": { "@type": "PostalAddress", "addressLocality": "Nürnberg", "addressCountry": "DE" } },
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 4, "item": {
       "@type": "Event", "name": "Aggrelin 14", "startDate": "2016-10-16",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Internationales Debüt in Salzburg – Ismail Naurdiev holte den Aggrelin-Welterweight-Titel.",
       "location": { "@type": "Place", "name": "republic", "address": { "@type": "PostalAddress", "addressLocality": "Salzburg", "addressCountry": "AT" } },
       "performer": [ { "@type": "Person", "name": "Ismail Naurdiev" } ],
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 5, "item": {
       "@type": "Event", "name": "Aggrelin 20 – Blood & Champagne", "startDate": "2017-10-07",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Aggrelin in Starnberg im Rekordjahr 2017.",
       "location": { "@type": "Place", "name": "H'ugo's Beachclub Undosa", "address": { "@type": "PostalAddress", "addressLocality": "Starnberg", "addressCountry": "DE" } },
       "performer": [ { "@type": "Person", "name": "Florian Sparakowski" } ],
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 6, "item": {
       "@type": "Event", "name": "Aggrelin 26", "startDate": "2018-12-08",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Lazar Todev gewann den Hauptkampf in Ingolstadt.",
       "location": { "@type": "Place", "name": "Mayer Classic Cars", "address": { "@type": "PostalAddress", "addressLocality": "Ingolstadt", "addressCountry": "DE" } },
       "performer": [ { "@type": "Person", "name": "Lazar Todev" } ],
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }},
     { "@type": "ListItem", "position": 7, "item": {
       "@type": "Event", "name": "Aggrelin 28", "startDate": "2019-05-19",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "image": "https://aggrelin.com/og.png",
+      "image": "https://www.aggrelin.com/og-image.png",
       "description": "Aggrelin gastiert in Baden-Württemberg – zwölf Kämpfe im LKA Longhorn.",
       "location": { "@type": "Place", "name": "LKA Longhorn", "address": { "@type": "PostalAddress", "addressLocality": "Stuttgart", "addressCountry": "DE" } },
       "performer": [ { "@type": "Person", "name": "Walid Laidi" }, { "@type": "Person", "name": "Daniel Holl" } ],
-      "organizer": { "@id": "https://aggrelin.com/#organization" }
+      "organizer": { "@id": "https://www.aggrelin.com/#organization" }
     }}
   ]
 }
@@ -401,11 +387,9 @@
 </head>
 <body>
 
-<div class="progress" id="progress"></div>
-
 <header id="top">
   <div class="wrap nav">
-    <a href="#top" class="brand"><span class="dot"></span>AGGRELIN</a>
+    <a href="#top" class="brand"><img class="brand-logo" src="aggrelin-logo.png" alt="Aggrelin" />AGGRELIN</a>
     <nav>
       <div class="nav-links" id="navLinks">
         <a href="#ueber">Über</a>
@@ -424,21 +408,10 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <!-- Echtes Aggrelin-27-Footage (KI-geschnitten) als Hintergrund-Ebene; Clip 2/3 zum Tauschen siehe Kommentar -->
-  <video class="herovideo" autoplay muted loop playsinline preload="auto">
-    <source src="https://d8j0ntlcm91z4.cloudfront.net/clipify/user_3FK0BDsnhvZ1McqUSOZldbhci4W/rhywmlvgyk-e4c1aa9657/5e9929d3-16be-4520-931b-448a2ff391d5/clips/clip_01.mp4" type="video/mp4">
-  </video>
-  <!-- Clip 2: .../clips/clip_02.mp4 · Clip 3: .../clips/clip_03.mp4 -->
-  <div class="herovideo-scrim"></div>
-  <canvas id="spark"></canvas>
-  <svg class="octagon" viewBox="0 0 100 100" aria-hidden="true">
-    <polygon points="30,5 70,5 95,30 95,70 70,95 30,95 5,70 5,30"/>
-    <polygon class="inner" points="35,14 65,14 86,35 86,65 65,86 35,86 14,65 14,35"/>
-    <polygon class="inner" points="42,26 58,26 74,42 74,58 58,74 42,74 26,58 26,42"/>
-  </svg>
+  <img class="octagon" src="aggrelin-logo.png" alt="" aria-hidden="true" />
   <div class="wrap hero-inner">
     <p class="eyebrow" style="opacity:0;animation:rise .7s .1s forwards">MMA · Kickboxen · Bavarian Boxing — im Käfig</p>
-    <h1 class="glowpulse" aria-label="Aggrelin">
+    <h1 aria-label="Aggrelin">
       <span style="animation-delay:.12s">A</span><span style="animation-delay:.18s">G</span><span style="animation-delay:.24s">G</span><span style="animation-delay:.30s">R</span><span style="animation-delay:.36s">E</span><span style="animation-delay:.42s" class="stroke">L</span><span style="animation-delay:.48s" class="stroke">I</span><span style="animation-delay:.54s" class="stroke">N</span>
     </h1>
     <div class="reveal-seq">
@@ -450,8 +423,8 @@
         <span class="chip"><b>2</b> Länder</span>
       </div>
       <div class="hero-cta" style="animation-delay:.8s">
-        <a href="#historie" class="btn btn-primary magnetic">Die Historie</a>
-        <a href="#kontakt" class="btn btn-ghost magnetic">Kontakt aufnehmen</a>
+        <a href="#historie" class="btn btn-primary">Die Historie</a>
+        <a href="#kontakt" class="btn btn-ghost">Kontakt aufnehmen</a>
       </div>
     </div>
   </div>
@@ -461,10 +434,10 @@
 <!-- STATS -->
 <section class="stats">
   <div class="wrap">
-    <div class="grid" id="statsRow">
-      <div class="stat"><div class="num"><span class="count" data-to="2009" data-plain="1">0</span></div><div class="lbl">Gegründet · München</div></div>
-      <div class="stat"><div class="num">~<span class="count" data-to="29">0</span></div><div class="lbl">Galas</div></div>
-      <div class="stat"><div class="num"><span class="count" data-to="7">0</span></div><div class="lbl">Städte</div></div>
+    <div class="grid">
+      <div class="stat"><div class="num">2009</div><div class="lbl">Gegründet · München</div></div>
+      <div class="stat"><div class="num">~29</div><div class="lbl">Galas</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">Städte</div></div>
       <div class="stat"><div class="num">DE · AT</div><div class="lbl">Bayern &amp; Österreich</div></div>
     </div>
   </div>
@@ -496,8 +469,7 @@
   <div class="wrap">
     <p class="eyebrow reveal">Historie</p>
     <h2 class="section-title reveal">Zehn Jahre <span class="accent">im Käfig.</span></h2>
-    <div class="timeline" id="timeline">
-      <div class="axisfill" id="axisfill"></div>
+    <div class="timeline">
       <div class="tl reveal"><div class="yr">2009</div><h3>Münchens erste Cage-Show</h3><p>Aggrelin richtet mit Aggrelin 1 in der „Badeanstalt" die erste MMA-Cage-Veranstaltung Münchens aus — und eine der ersten überhaupt in Bayern.</p></div>
       <div class="tl reveal"><div class="yr">2010</div><h3>Der Rückschlag</h3><p>In Karlsfeld bei Dachau wird keine Genehmigung für Schläge am Boden zum Kopf erteilt — ein herber Einschnitt für das junge bayerische MMA.</p></div>
       <div class="tl reveal"><div class="yr">2013</div><h3>Das Comeback</h3><p>Rund drei Jahre später genehmigen die Münchner Behörden wieder volle Bodenarbeit. Aggrelin kehrt zurück — in die Theaterfabrik in den Optimolwerken.</p></div>
@@ -523,15 +495,6 @@
       <div class="city reveal clickable" data-ev="stuttgart" role="button" tabindex="0"><span class="flag">DE · BW</span><h3>Stuttgart</h3><p>LKA Longhorn</p><span class="ghost">06</span><span class="open">Fightcard ansehen <span class="ar">→</span></span></div>
       <div class="city wide reveal clickable" data-ev="salzburg" role="button" tabindex="0"><span class="flag">AT · Salzburg</span><h3>Salzburg</h3><p>„republic" — das internationale Debüt von Aggrelin</p><span class="ghost">07</span><span class="open">Fightcard ansehen <span class="ar">→</span></span></div>
     </div>
-  </div>
-</section>
-<!-- ALLE FIGHTCARDS -->
-<section class="allfights-band">
-  <div class="wrap" style="text-align:center">
-    <p class="eyebrow" style="justify-content:center">Komplettes Archiv</p>
-    <h2 class="section-title" style="margin-top:14px">Jede Gala. <span class="accent">Jeder Kampf.</span></h2>
-    <p style="color:var(--muted);max-width:52ch;margin:16px auto 30px;font-size:1.05rem">29 Galas von 2009 bis 2019 — die vollständigen Fightcards aller Aggrelin-Events an einem Ort.</p>
-    <button id="allFightsBtn" class="btn btn-primary">&#9638;&nbsp; Alle Fightcards öffnen</button>
   </div>
 </section>
 
@@ -592,8 +555,8 @@
         <div class="frame"><img src="https://i.ytimg.com/vi/9J5nAIHLBLY/hqdefault.jpg" alt="Aggrelin 1 — Video" loading="lazy"><span class="play" aria-hidden="true"></span></div>
         <div class="vmeta"><span class="vtag">München · 2009</span><h3>Aggrelin 1 — wo alles begann</h3></div>
       </a>
-      <a class="video reveal" href="https://www.youtube.com/watch?v=SbQQFjvAsAw" target="_blank" rel="noopener">
-        <div class="frame"><img src="https://i.ytimg.com/vi/SbQQFjvAsAw/hqdefault.jpg" alt="Aggrelin 14 — Highlights (Salzburg)" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+      <a class="video reveal" href="https://www.youtube.com/watch?v=tWVfGmP_3Sg" target="_blank" rel="noopener">
+        <div class="frame"><img src="https://i.ytimg.com/vi/tWVfGmP_3Sg/hqdefault.jpg" alt="Aggrelin 14 — Highlights (Salzburg)" loading="lazy"><span class="play" aria-hidden="true"></span></div>
         <div class="vmeta"><span class="vtag">Salzburg · 2016</span><h3>Aggrelin 14 — Highlights</h3></div>
       </a>
       <a class="video reveal" href="https://www.youtube.com/watch?v=_rhywmlvgyk" target="_blank" rel="noopener">
@@ -639,7 +602,7 @@
 
 <footer>
   <div class="wrap foot">
-    <a href="#top" class="brand"><span class="dot"></span>AGGRELIN</a>
+    <a href="#top" class="brand"><img class="brand-logo" src="aggrelin-logo.png" alt="Aggrelin" />AGGRELIN</a>
     <div class="small">Cage Fight · MMA · seit 2009 · München</div>
     <div class="small"><a href="impressum.html" style="color:inherit;text-decoration:underline">Impressum</a> · <a href="datenschutz.html" style="color:inherit;text-decoration:underline">Datenschutz</a></div>
     <div class="small">© <span id="yr"></span> Aggrelin</div>
@@ -662,19 +625,6 @@
         <div id="evCard" class="evcard"></div>
       </div>
     </div>
-  </div>
-</div>
-
-<!-- ARCHIV-MODAL: alle Fightcards -->
-<div class="evbackdrop" id="allBackdrop" aria-hidden="true">
-  <div class="evmodal allmodal" role="dialog" aria-modal="true" aria-labelledby="allTitle">
-    <button class="evclose" id="allClose" aria-label="Schließen">&times;</button>
-    <div class="evhead">
-      <span class="evtag">Archiv · 2009&ndash;2019</span>
-      <h3 id="allTitle">Alle Fightcards</h3>
-      <div class="evmeta" id="allMeta"></div>
-    </div>
-    <div class="evbody"><div class="allwrap" id="allList"></div></div>
   </div>
 </div>
 
@@ -730,24 +680,6 @@
   .evtile.placeholder{border:1px dashed rgba(255,255,255,.14)}
   .evtile.placeholder span{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#55555f}
   @media(max-width:520px){ .evhead,.evbody{padding-left:18px;padding-right:18px} .evhead h3{font-size:1.7rem} .evbout .half{padding:10px 12px} .fname{font-size:.85rem} .evbout .method::before,.evbout .method::after{width:26px} }
-  .allfights-band{background:linear-gradient(180deg,#0d0c0e,var(--bg));border-top:1px solid var(--line)}
-  .allmodal{max-width:780px}
-  .allwrap{display:flex;flex-direction:column;gap:10px}
-  .gala{border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;background:#0d0d12}
-  .galahd{display:flex;align-items:center;gap:14px;padding:15px 18px;cursor:pointer;transition:background .2s;user-select:none}
-  .galahd:hover{background:rgba(255,255,255,.03)}
-  .galanum{font-family:'Anton',sans-serif;font-size:1.7rem;color:#cf1622;line-height:1;min-width:48px;text-align:center}
-  .galainfo{flex:1;min-width:0}
-  .galainfo .t{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:1.0rem;color:#f3f1ec;line-height:1.2}
-  .galainfo .s{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.06em;color:#8f8f97;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .galachev{color:#8f8f97;transition:transform .25s;font-size:1.2rem;flex:none}
-  .gala.open .galachev{transform:rotate(90deg);color:#ff2a36}
-  .galabody{display:none;padding:4px 18px 16px}
-  .gala.open .galabody{display:block}
-  .galanote{font-family:'Oswald',sans-serif;font-style:italic;color:#8f8f97;font-size:.85rem;margin:8px 0 6px}
-  .allbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-  .allbar button{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:#9a9aa2;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:7px;padding:7px 12px;cursor:pointer;transition:.2s}
-  .allbar button:hover,.allbar button.active{background:#cf1622;color:#fff;border-color:#cf1622}
 </style>
 
 <script>
@@ -767,31 +699,6 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // === Enhancements (Motion-Upgrade) ===
-  (function(){
-    var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
-    var prog=document.getElementById('progress');
-    function pr(){var h=document.documentElement.scrollHeight-innerHeight; if(prog) prog.style.width=(h>0?scrollY/h*100:0)+'%';
-      var tl=document.getElementById('timeline');
-      if(tl){var r=tl.getBoundingClientRect(); var f=Math.max(0,Math.min(1,(innerHeight*0.7-r.top)/r.height));
-        var af=document.getElementById('axisfill'); if(af) af.style.height=(f*100)+'%';
-        var ns=tl.querySelectorAll('.tl'); ns.forEach(function(n,i){ n.classList.toggle('lit', f> i/ns.length); });}}
-    addEventListener('scroll',pr,{passive:true}); addEventListener('resize',pr); pr();
-    function counters(){document.querySelectorAll('.count').forEach(function(el){var to=+el.dataset.to,plain=el.dataset.plain,t0=performance.now(),dur=1100;
-      (function tick(t){var p=Math.min(1,(t-t0)/dur),n=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=plain?n:n.toLocaleString('de-DE');if(p<1)requestAnimationFrame(tick);})(t0);});}
-    var sr=document.getElementById('statsRow');
-    if(sr){var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){counters();io2.unobserve(e.target);}});},{threshold:.4}); io2.observe(sr);}
-    if(reduce) return;
-    var hero=document.getElementById('hero');
-    document.querySelectorAll('.magnetic').forEach(function(b){
-      b.addEventListener('pointermove',function(ev){var r=b.getBoundingClientRect(); b.style.transform='translate('+((ev.clientX-r.left-r.width/2)*.3)+'px,'+((ev.clientY-r.top-r.height/2)*.4)+'px)';});
-      b.addEventListener('pointerleave',function(){b.style.transform='';});});
-    var cv=document.getElementById('spark'); if(cv&&hero){var ctx=cv.getContext('2d'),W,H,parts=[];
-      function size(){W=cv.width=hero.offsetWidth;H=cv.height=hero.offsetHeight;} size(); addEventListener('resize',size);
-      for(var i=0;i<46;i++)parts.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.4,vy:-(Math.random()*.5+.15),vx:(Math.random()-.5)*.25,a:Math.random()*.5+.2});
-      (function loop(){ctx.clearRect(0,0,W,H);parts.forEach(function(p){p.y+=p.vy;p.x+=p.vx;if(p.y<-5){p.y=H+5;p.x=Math.random()*W;}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);ctx.fillStyle='rgba(255,'+((60+Math.random()*40)|0)+',40,'+p.a+')';ctx.fill();});requestAnimationFrame(loop);})();}
-  })();
 
   // --- Event-Modal: Stadt anklicken -> Fightcard + Galerie ---
   // HINWEIS: 'card' = Kampfpaarungen (Platzhalter, von Heinz zu ergaenzen),
@@ -928,56 +835,6 @@
   evClose.addEventListener('click', closeEvent);
   evBackdrop.addEventListener('click', ev => { if(ev.target===evBackdrop) closeEvent(); });
   document.addEventListener('keydown', ev => { if(ev.key==='Escape' && evBackdrop.classList.contains('show')) closeEvent(); });
-
-  // === Alle Fightcards (Archiv) ===
-  const ALL_EVENTS = [{"num": 1, "date": "30. Apr. 2009", "city": "München", "venue": "Badeanstalt", "title": "Münchens erste Cage-Show", "note": "April 2009 — Münchens allererste MMA-Cage-Veranstaltung. Frühe Card nur teilweise dokumentiert.", "card": [{"a": "Ulas Aslan", "b": "Robert Westerman", "r": "TKO · R3", "main": true}, {"a": "Set McDowell", "b": "Tarik Kuzucu", "r": "TKO · R2"}, {"a": "Benjamin Russ", "b": "Ismet Mandara", "r": "TKO · R1"}, {"a": "Nicolas Penzer", "b": "Eldin Pajic", "r": "Submission · R1"}, {"a": "Peter Frontera", "b": "Athanasios Zampakikas", "r": "Submission · R1"}, {"a": "Philipp Ulsamer", "b": "Fabio Malino", "r": "Submission · R1"}, {"a": "Kevin Demmin", "b": "Patrick Simon", "r": "Submission · R1"}]}, {"num": 2, "date": "27. Feb. 2010", "city": "Karlsfeld", "venue": "Bürgerhaus Karlsfeld", "title": "", "note": "Karlsfeld bei Dachau — weitgehend undokumentiert (Genehmigungs-Auflagen). Nur ein belegter Kampf.", "card": [{"a": "Agop Sirin", "b": "Christian Bauer", "r": "Einst. Entscheidung · R2", "main": true}]}, {"num": 3, "date": "28. Apr. 2013", "city": "München", "venue": "Optimolgelände", "title": "Cage Fight Munich 2", "card": [{"a": "Patrick Simon", "b": "Andre Schug", "r": "TKO (Schläge) · R1 0:40", "main": true}, {"a": "David Ulus", "b": "Yanick Happichen", "r": "TKO (Schläge) · R1 4:00"}, {"a": "Dominik Henneberger", "b": "Magomed Batukaev", "r": "Submission (Triangle) · R1 1:30"}, {"a": "Stefan Obermayr", "b": "Alexander Matschl", "r": "TKO (Schläge) · R2 3:30"}, {"a": "Lukas Brückmann", "b": "Boris Glisic", "r": "Einst. Entscheidung · R2"}, {"a": "German Atuev", "b": "Leon Vasilik", "r": "Submission (RNC) · R1 4:10"}, {"a": "Michael Denk", "b": "Abdubosit Karimov", "r": "TKO (Schläge) · R1 3:40"}, {"a": "Igor Desku", "b": "Hannes Stemberg", "r": "Submission (Guillotine) · R1 0:45"}, {"a": "Jakob Zorla", "b": "Christian Lochner", "r": "Submission (Armbar) · R1 1:30"}, {"a": "Felix Scherübel", "b": "Onur Aksuel", "r": "TKO (Schläge) · R2 3:10"}, {"a": "Andreas Schewkun", "b": "Gokhan Aksu", "r": "Submission (Kimura) · R1 2:39"}]}, {"num": 4, "date": "15. Sept. 2013", "city": "München", "venue": "Theaterfabrik", "title": "Cage Fight Munich 3", "card": [{"a": "Ruben Wolf", "b": "Calvin Lyons", "r": "Submission (RNC) · R3 4:16", "main": true}, {"a": "Patrick Simon", "b": "Christoph Hector", "r": "Submission (RNC) · R1"}, {"a": "Markus Grosse", "b": "Christian Bauer", "r": "Submission (Arm-Triangle) · R1 0:38"}, {"a": "Igor Stübing", "b": "Georg Reichert", "r": "Submission (Schläge) · R2 0:52"}, {"a": "Kristian Ozimec", "b": "Janosh Dobias", "r": "TKO (Schläge) · R2 0:45"}, {"a": "Peter Treichl", "b": "Andreas Schewkun", "r": "Einst. Entscheidung · R2"}, {"a": "Garcia Matadore", "b": "Philippe Best", "r": "Submission (Armbar) · R1 4:47"}, {"a": "Ivan Polinski", "b": "Mohammed Dzambekov", "r": "Submission (RNC) · R1 2:26"}, {"a": "Leonard Stemann", "b": "Djambulat Kulbuschev", "r": "Submission (Triangle) · R1 2:04"}, {"a": "Jaroslav Altergott", "b": "Phillip Konatarovic", "r": "Submission (Keylock) · R1 2:37"}, {"a": "Sebastian Ulitzka", "b": "Ramon Schneider", "r": "Submission (RNC) · R1 4:14"}]}, {"num": 5, "date": "23. März 2014", "city": "München", "venue": "Theaterfabrik", "title": "Cage Fight Bavaria", "card": [{"a": "Mario Wittmann", "b": "Mohammed Kayaoz", "r": "TKO (Schläge) · R1 0:35", "main": true}, {"a": "Jonny Kruschinske", "b": "Andreas Braun", "r": "Submission (Kimura) · R2 4:13"}, {"a": "Murat Soysüren", "b": "Fitim Ukelli", "r": "TKO (Schläge) · R2 3:15"}, {"a": "Ümit Polat", "b": "Florian Flormann", "r": "Submission (Schläge) · R1 2:22"}, {"a": "Lukas Brückmann", "b": "Jaroslav Altergott", "r": "Submission (Triangle) · R1 1:14"}, {"a": "Felix Scherübel", "b": "Dawid Masarczyk", "r": "TKO (Schläge) · R1 2:30"}, {"a": "Sylwester Hasny", "b": "Halil Ibraham", "r": "Submission (Armbar) · R1 2:36"}, {"a": "Anatolij Baal", "b": "David Depannemaecker", "r": "TKO (Schläge) · R1 4:26"}, {"a": "Ivan Polinski", "b": "Philippe Best", "r": "TKO (Schläge) · R1 1:57"}, {"a": "Till Kinne", "b": "Alexander Matschl", "r": "KO (Schlag) · R2 1:51"}, {"a": "Dusan Kvrizic", "b": "Paolo Bettini", "r": "Einst. Entscheidung · R2"}]}, {"num": 6, "date": "7. Sept. 2014", "city": "München", "venue": "Theaterfabrik", "title": "", "card": [{"a": "Nicolaj Wagner", "b": "Ümit Polat", "r": "TKO (Verletzung) · R1 3:27", "main": true}, {"a": "Lukas Georg", "b": "Calvin Lyons", "r": "Submission (RNC) · R1 2:20"}, {"a": "Hasan Uguz", "b": "Sylwester Hasny", "r": "Einst. Entscheidung"}, {"a": "Mathias Markic", "b": "Pascal Kloser", "r": "Submission (RNC) · R1 1:30"}, {"a": "Daniel Dörrer", "b": "Florian Motz", "r": "TKO (Kicks) · R1 2:10"}, {"a": "Dom Bandog", "b": "Daniel Adler", "r": "TKO (G&P) · R1 1:37"}, {"a": "Ralf Simson", "b": "Mirza Ramic", "r": "Einst. Entscheidung"}, {"a": "Alexander Poppeck", "b": "Per Ahrens", "r": "TKO (G&P) · R1 2:50"}, {"a": "Michael Haupert", "b": "Jaroslav Altergott", "r": "Unentschieden", "draw": true}, {"a": "Christian Bräunlich", "b": "Raybek Arsanukaev", "r": "Einst. Entscheidung"}]}, {"num": 7, "date": "12. Apr. 2015", "city": "München", "venue": "Backstage München", "title": "Backstage Brawl", "card": [{"a": "Patrick Simon", "b": "Jonny Kruschinske", "r": "Einst. Entscheidung · R3", "main": true}, {"a": "Markus Cuk", "b": "Maximilien Schlatter", "r": "TKO (G&P) · R1 1:09"}, {"a": "Alexander Poppeck", "b": "Johannes Baier", "r": "TKO (G&P) · R1 2:25"}, {"a": "Raphael Lesnino", "b": "Manuel Klimt", "r": "TKO (Knie zum Kopf) · R2 1:53"}, {"a": "Filip Bradarić", "b": "Veselin Dimitrov", "r": "TKO (G&P) · R1 2:41"}, {"a": "Adrian Kulisch", "b": "Jakob Marschall", "r": "TKO (G&P) · R2 1:46"}, {"a": "Mario Dengg", "b": "Filip Zadruzynski", "r": "TKO (G&P)"}, {"a": "Michael Deiga-Scheck", "b": "Halil Ibrahim Keskin", "r": "Submission · R2"}, {"a": "Mohammed Sadok Trabelsi", "b": "Timur Labazanov", "r": "Submission · R1"}]}, {"num": 8, "date": "6. Sept. 2015", "city": "München", "venue": "Backstage München", "title": "Backstage Brawl 2 · AG-Welterweight-Titel", "card": [{"a": "Patrick Simon", "b": "Sebastian Steinmann", "r": "Einst. Entscheidung · R3 · AG-Titel", "main": true}, {"a": "Rachid Metlouti", "b": "Markus Grosse", "r": "TKO (Aufgabe) · R1"}, {"a": "Mario Dengg", "b": "Andrius Liudvinavicius", "r": "TKO (Schläge) · R2 2:27"}, {"a": "Dawid Masarczyk", "b": "Florian Motz", "r": "Submission (RNC) · R1 1:30"}, {"a": "Alexander Poppeck", "b": "Sami Heyoun", "r": "TKO (Aufgabe) · R2"}, {"a": "Manuel Klimt", "b": "Paolo Bettini", "r": "TKO (Schläge) · R1 4:40"}, {"a": "Mohammed Sadok Trabelsi", "b": "Ruslan Malsam", "r": "Einst. Entscheidung · R3"}, {"a": "Erik Enzensberger", "b": "Victor Kessler", "r": "Submission (Triangle) · R1 2:04"}, {"a": "Francisco de Souza", "b": "Quincy Dwamena", "r": "TKO (Aufgabe) · R1"}, {"a": "Raphael Lesnino", "b": "Adam Taramov", "r": "TKO (Schläge) · R3 0:39"}, {"a": "Chris Kalb", "b": "Meikl Skrupniak", "r": "TKO (Schläge) · R1 2:30"}]}, {"num": 9, "date": "13. Dez. 2015", "city": "Rosenheim", "venue": "Ballhaus Rosenheim", "title": "", "card": [{"a": "Markus Grosse", "b": "Benjamin Augustyniak", "r": "Submission (Armbar) · R1 3:17", "main": true}, {"a": "Fitim Ukelli", "b": "Dawid Masarczyk", "r": "TKO (Schläge) · R1 3:41"}, {"a": "Adrian Kulisch", "b": "Andreas Braun", "r": "TKO (Schläge) · R1 3:14"}, {"a": "Francisco de Souza", "b": "Andreas Siegmund Grzywa", "r": "TKO (Schläge) · R1 1:16"}, {"a": "Florian Kienberger", "b": "Manuel Klimt", "r": "Submission (Triangle) · R1 4:40"}, {"a": "Alexander Poppeck", "b": "Csaba Horvath", "r": "TKO (Schläge) · R1 1:44"}, {"a": "Djati Melan", "b": "Michael Haupert", "r": "TKO (Schläge) · R2 1:30"}, {"a": "Ruslan Malsam", "b": "Eugen Braun", "r": "Submission (Armbar) · R1 1:47"}, {"a": "Rinor Gashi", "b": "Arnold Steinbach", "r": "Submission (Guillotine) · R1 2:49"}, {"a": "Simon Friesenecker", "b": "Mario Joseph", "r": "TKO (Schläge) · R1 0:19"}]}, {"num": 10, "date": "20. Feb. 2016", "city": "München", "venue": "Backstage München", "title": "", "card": [{"a": "Valdrin Istrefi", "b": "Stefan Traunmüller", "r": "Einst. Entscheidung · R3", "main": true}, {"a": "Mohammed Sadok Trabelsi", "b": "Florian Rousseau", "r": "KO (Schlag) · R1 2:56"}, {"a": "Rachid Metlouti", "b": "Benjamin Augustyniak", "r": "Submission (Schläge) · R2 3:32"}, {"a": "Johannes Heigl", "b": "Andrius Liudvinavicius", "r": "Submission (Kimura) · R2 2:32"}, {"a": "Mustafa Yilmaz", "b": "Ruslan Malsam", "r": "Submission (Armbar) · R1 3:17"}, {"a": "Valid Abdurachmanov", "b": "Daniel Stampfl", "r": "Einst. Entscheidung · R3"}, {"a": "Christian Lochner", "b": "Victor Kessler", "r": "Einst. Entscheidung · R3"}, {"a": "Sanja Samardzic", "b": "Steffi Homolka", "r": "Unentschieden", "draw": true}, {"a": "Florian Aberger", "b": "Elma Shams", "r": "Submission (Triangle) · R2 2:41"}]}, {"num": 11, "date": "24. Apr. 2016", "city": "Rosenheim", "venue": "Ballhaus Rosenheim", "title": "", "card": [{"a": "Mohammed Sadok Trabelsi", "b": "Sylwester Hasny", "r": "TKO (Schläge) · R1 1:39", "main": true}, {"a": "Dawid Masarczyk", "b": "Tomas Lejsek", "r": "Submission (RNC) · R1 4:53"}, {"a": "Benjamin Augustyniak", "b": "Kevin Cekic", "r": "TKO (Schläge) · R3 3:20"}, {"a": "Rustam Shamilov", "b": "Frederic Jodl", "r": "TKO (Schläge) · R1 4:07"}, {"a": "Veselin Dimitrov", "b": "Florian Kienberger", "r": "Mehrh. Entscheidung"}, {"a": "Eugen Braun", "b": "Halil Ibraham", "r": "Submission (Armbar) · R2 2:11"}, {"a": "Gokhan Aksu", "b": "David Ulus", "r": "Submission (RNC) · R1 2:54"}, {"a": "Rinor Gashi", "b": "Islam Bamatov", "r": "Einst. Entscheidung"}, {"a": "Sado Ucar", "b": "Nicolas D'Elia", "r": "Mehrh. Entscheidung"}, {"a": "Endrit Brajshori", "b": "Francesco Paolino", "r": "TKO (Schläge) · R1 0:22"}, {"a": "Andranik Hovsepian", "b": "Omar Rasera", "r": "TKO (Schläge) · R2 2:32"}, {"a": "Burak Kizilirmak", "b": "Timur Celik", "r": "TKO (Schläge) · R1 2:31"}]}, {"num": 12, "date": "29. Mai 2016", "city": "Nürnberg", "venue": "Löwensaal", "title": "Heavyweight-Titel", "card": [{"a": "Dritan Barjamaj", "b": "Rachid Metlouti", "r": "TKO (Schläge) · R1 1:23 · HW-Titel", "main": true}, {"a": "Benedikt Panzer", "b": "Georges Sasu", "r": "Submission (RNC) · R2 0:32"}, {"a": "Valid Abdurachmanov", "b": "David Depannemaecker", "r": "Einst. Entscheidung"}, {"a": "Michal Horejsi", "b": "Sebastian Ulitzka", "r": "Einst. Entscheidung"}, {"a": "Leon Müller", "b": "Ruslan Malsam", "r": "TKO (Schläge) · R2 1:46"}, {"a": "Andreas Hasselbacher", "b": "Daniel Stampfl", "r": "Einst. Entscheidung"}, {"a": "Lukas Stawny", "b": "Paddy Mader", "r": "Einst. Entscheidung"}, {"a": "Mark Pfeiffer", "b": "Artem Shapovalov", "r": "TKO (Schläge) · R1 3:00"}, {"a": "Artjom Feinberg", "b": "Julian Straetz", "r": "TKO (Schläge) · R2 1:58"}, {"a": "Phillip Graf", "b": "Fabian Sinzinger", "r": "TKO (Schläge) · R2 0:35"}, {"a": "Cardas Sengül", "b": "Daniel Knabl", "r": "TKO (Arzt-Abbruch) · R1 1:06"}]}, {"num": 13, "date": "11. Sept. 2016", "city": "München", "venue": "Backstage", "title": "Lightweight-Titel", "card": [{"a": "Lajos Etelaky", "b": "Mohammed Sadok Trabelsi", "r": "Einst. Entscheidung · LW-Titel", "main": true}, {"a": "Cinja Kiefer", "b": "Ophelie Sinel", "r": "Submission (Triangle) · R2 3:51"}, {"a": "Arif Emre Koyuncu", "b": "Andreas Hasselbacher", "r": "TKO (Schläge) · R2 1:05"}, {"a": "Phillip Graf", "b": "Abdulkadir Geylani Yilmaz", "r": "TKO (Schläge) · R2 2:41"}, {"a": "Erwin Kupczyk", "b": "Jan Hoeppel", "r": "Unentschieden (Split)", "draw": true}, {"a": "Daniel Holl", "b": "Charnell Anthony Taylor", "r": "TKO (Schläge) · R2 2:42"}, {"a": "Cardas Sengül", "b": "Eric Brockmann", "r": "TKO (Schlag) · R3 0:18"}, {"a": "Marian Bauer", "b": "Sascha Müller", "r": "Submission (Armbar) · R2 2:32"}]}, {"num": 14, "date": "16. Okt. 2016", "city": "Salzburg", "venue": "republic", "title": "Welterweight-Titel", "card": [{"a": "Ismail Naurdiev", "b": "Garik Shahbabyan", "r": "Submission (Arm-Triangle) · R2 2:41 · WW-Titel", "main": true}, {"a": "Ayub Gaziev", "b": "Giorgi Bazanov", "r": "Einst. Entscheidung"}, {"a": "German Atuev", "b": "Florian Wolf", "r": "Submission (Armbar) · R2 1:36"}, {"a": "Johannes Heigl", "b": "Kevin Cekic", "r": "TKO (Schläge) · R2 1:26"}, {"a": "Chris Kalb", "b": "Christian Stephan", "r": "Submission (Guillotine) · R1 0:49"}, {"a": "Daniel Stampfl", "b": "Manuel Klimt", "r": "Einst. Entscheidung"}, {"a": "Leonard Stemann", "b": "Kristijan Djuric", "r": "Submission (RNC) · R1 2:47"}, {"a": "Roland Boza", "b": "Bislan Batschaev", "r": "Submission (Triangle) · R2 1:17"}, {"a": "Florian Sparakowski", "b": "Steven Staebler", "r": "TKO (Schläge) · R1 0:52"}, {"a": "Daniel Matusic", "b": "Basti Reuters", "r": "TKO (Schläge) · R1 2:59"}, {"a": "Jan Hoeppel", "b": "Samuel Pitek", "r": "TKO (Schläge) · R2 2:42"}]}, {"num": 15, "date": "18. Dez. 2016", "city": "Nürnberg", "venue": "Löwensaal", "title": "Featherweight-Titel", "card": [{"a": "Ondrej Skalnik", "b": "Leonard Stemann", "r": "TKO (Schläge) · R2 3:00 · FW-Titel", "main": true}, {"a": "German Atuev", "b": "Eugenio Brumat", "r": "Submission (Armbar) · R2 3:40"}, {"a": "Michal Nepras", "b": "Sebastian Ulitzka", "r": "TKO (Verletzung) · R1 3:45"}, {"a": "Timo Kunkel", "b": "Leon Müller", "r": "TKO (Schläge) · R1 3:25"}, {"a": "Vojta Veselovsky", "b": "Daniel Holl", "r": "TKO (Verletzung) · R1 4:10"}, {"a": "Jan Zander", "b": "Michael Haupert", "r": "Submission (Triangle) · R2 2:32"}, {"a": "Melinda Fabian", "b": "Monic Billicsi", "r": "Submission (Ankle Lock) · R1 0:14"}, {"a": "Bilal Hammoud", "b": "Daniel Matusic", "r": "Einst. Entscheidung"}, {"a": "Angelica Vezzoli", "b": "Barbora Polakova", "r": "Submission (RNC) · R3 0:48"}, {"a": "Cihan Sönmez", "b": "Florian Niedermeyer", "r": "KO (Schlag) · R1 0:16"}, {"a": "Ozbazaje Meraj", "b": "Ahmad Abbas", "r": "Submission (RNC) · R1 2:10"}, {"a": "Norbert Grobelny", "b": "Mehmet Ali Altun", "r": "Submission (Kimura) · R2 1:00"}]}, {"num": 16, "date": "12. Feb. 2017", "city": "München", "venue": "Backstage", "title": "", "card": [{"a": "Mohammed Sadok Trabelsi", "b": "Giorgi Bazanov", "r": "Mehrh. Entscheidung", "main": true}, {"a": "Khayrudin Khoutiev", "b": "Francisco de Souza", "r": "TKO (Arzt-Abbruch) · R1"}, {"a": "Florian Kienberger", "b": "Ruslan Malsam", "r": "Submission (Guillotine) · R3 2:32"}, {"a": "Judith Ruis", "b": "Melinda Fabian", "r": "Submission (Guillotine) · R1 4:30"}, {"a": "Cihan Sönmez", "b": "Bartosz Stalewski", "r": "Einst. Entscheidung"}, {"a": "Lukas Silla", "b": "Pasi Chanderkant", "r": "Submission (Guillotine) · R1 0:48"}, {"a": "Phillip Graf", "b": "Salman Khadjiev", "r": "Einst. Entscheidung"}, {"a": "Florin Palagia", "b": "Nazim Yuru", "r": "TKO (Schläge) · R2 0:19"}, {"a": "Leonardo Damiani", "b": "Cardas Sengül", "r": "TKO (Schläge) · R2 1:57"}]}, {"num": 17, "date": "7. Mai 2017", "city": "München", "venue": "Backstage", "title": "", "card": [{"a": "Wilhelm Ott", "b": "Igor Montes", "r": "TKO (Schlag) · R1 2:15", "main": true}, {"a": "Raphael Lesnino", "b": "Daniel Wolak", "r": "Submission (Arm-Triangle) · R2 3:06"}, {"a": "Leonardo Damiani", "b": "Erik Enzensberger", "r": "Submission (RNC) · R2 1:33"}, {"a": "Bilal Hammoud", "b": "Daniel Matusic", "r": "Submission (RNC) · R2 0:18"}, {"a": "Dominik Cuturic", "b": "Philipp Raunig", "r": "TKO (Schläge) · R2 0:29"}, {"a": "Joel Batobo", "b": "Michi Marth", "r": "Submission (Armbar) · R1 2:03"}, {"a": "Erwin Kupczyk", "b": "Lukas Silla", "r": "TKO (Schläge) · R2 1:27"}, {"a": "Marian Bauer", "b": "Florin Palagia", "r": "Submission (Triangle) · R2 2:29"}, {"a": "Falko Hannaro", "b": "Omer Sirtkaya", "r": "Mehrh. Entscheidung"}]}, {"num": 18, "date": "11. Juni 2017", "city": "Nürnberg", "venue": "Löwensaal", "title": "", "card": [{"a": "Manuel Bilic", "b": "Florin Stan", "r": "DQ (Kick am Boden) · R3 3:11", "main": true}, {"a": "Vojta Veselovsky", "b": "David Depannemaecker", "r": "Submission (Guillotine) · R1 1:48"}, {"a": "Gerard Hergott", "b": "Christian Stephan", "r": "TKO (Schläge) · R2 2:25"}, {"a": "Rahman Magamschapiev", "b": "Phillip Graf", "r": "Submission (RNC) · R3 2:30"}, {"a": "Pavel Pilny", "b": "Fabian Princiotto", "r": "Submission (Armbar) · R1 1:19"}, {"a": "Barbora Polakova", "b": "Barbara Braun", "r": "Einst. Entscheidung"}, {"a": "Florian Sparakowski", "b": "Marian Bauer", "r": "KO (Schlag) · R1 1:15"}, {"a": "Steven Krt", "b": "Mark Pfeiffer", "r": "TKO (Schläge) · R3 2:23"}, {"a": "Erwin Kupczyk", "b": "Vincent Urbanczak", "r": "TKO (Schläge) · R2 0:17"}, {"a": "Marcin Kaczmarek", "b": "Konstantin Roch", "r": "Submission (Guillotine) · R3 2:01"}]}, {"num": 19, "date": "10. Sept. 2017", "city": "München", "venue": "Backstage", "title": "Middleweight-Titel", "card": [{"a": "Nihad Nasufovic", "b": "Wilhelm Ott", "r": "Submission (RNC) · R2 1:04 · MW-Titel", "main": true}, {"a": "Robert Valentin", "b": "Mario Dengg", "r": "Submission (RNC) · R2 4:02"}, {"a": "Florian Niedermeyer", "b": "Peter Kovacs", "r": "KO (Spinning Backfist) · R2 0:29"}, {"a": "Rahman Magamschapiev", "b": "Joel Batobo", "r": "TKO (Schläge) · R3 0:39"}, {"a": "Magomed Saraliev", "b": "Stefan Wagenknecht", "r": "Einst. Entscheidung"}, {"a": "Bilal Hammoud", "b": "Phillip Graf", "r": "Einst. Entscheidung"}, {"a": "Magomed Makaev", "b": "Mahdi Sadeqi", "r": "Einst. Entscheidung"}, {"a": "Max Friedrich", "b": "Mathias Jabornig", "r": "KO (Head Kick) · R1 2:34"}, {"a": "Eduard Gieb", "b": "Barna Szocs", "r": "TKO (Schläge) · R2 1:27"}, {"a": "Edis Bayraktar", "b": "Dzhambulat Temirov", "r": "Submission (Armbar) · R1 1:11"}]}, {"num": 20, "date": "7. Okt. 2017", "city": "Starnberg", "venue": "H'ugo's Beachclub Undosa", "title": "Blood & Champagne", "card": [{"a": "Florian Sparakowski", "b": "Omar Camara", "r": "TKO (Knie & Schläge) · R1 3:47", "main": true}, {"a": "Giorgi Bazanov", "b": "Florian Niedermeyer", "r": "KO (Spinning Backfist) · R2 1:40"}, {"a": "Daniel Knabl", "b": "Leon Oliver Al Forster", "r": "TKO (Schläge) · R3 2:13"}, {"a": "Dzhambulat Temirov", "b": "Tim Schwabe", "r": "Mehrh. Entscheidung"}, {"a": "Jean Phillip Berndt", "b": "Robin Jean Philippe", "r": "KO (Schlag) · R1 0:06"}, {"a": "Nicolas Yavuz", "b": "Amin Malikovich", "r": "Submission (Triangle) · R2 2:29"}]}, {"num": 21, "date": "4. Nov. 2017", "city": "Rosenheim", "venue": "Ballhaus Rosenheim", "title": "", "card": [{"a": "Markus Grosse", "b": "Nabil Issad", "r": "No Contest (Schläge am Hinterkopf) · R1 2:21", "main": true}, {"a": "Christian Lochner", "b": "Christian Jungwirth", "r": "KO (Head Kick) · R3 4:21"}, {"a": "Mikhail Zaipoulaiev", "b": "Chris Kalb", "r": "Submission (Guillotine) · R1 2:30"}, {"a": "Rinor Gashi", "b": "Michael Andjelkovic", "r": "Submission (RNC) · R1 1:12"}, {"a": "Steven Krt", "b": "Brian Morehead", "r": "TKO (G&P) · R2 0:57"}, {"a": "Eugen Braun", "b": "Jan David", "r": "Submission (RNC) · R1 1:42"}, {"a": "Stefan Wagenknecht", "b": "Pavel Pilny", "r": "Einst. Entscheidung"}]}, {"num": 22, "date": "17. Dez. 2017", "city": "Salzburg", "venue": "republic", "title": "Welterweight-Titel", "card": [{"a": "Daniel Wolak", "b": "Ayub Gaziev", "r": "DQ (Unsportliches Verhalten) · R3 5:00", "main": true}, {"a": "Erik Enzensberger", "b": "Fitim Ukelli", "r": "Submission (Anaconda) · R2 1:11"}, {"a": "Tarhan Ibragimov", "b": "Nemanja Kukic", "r": "KO (Spinning Back Kick) · R1 0:47"}, {"a": "Hasan Chamzatov", "b": "Nenad Dunovic", "r": "Submission (Guillotine) · R1 1:44"}, {"a": "Falko Hannaro", "b": "Ilyas Umarov", "r": "Submission (Triangle/Armbar) · R1 0:42"}, {"a": "Lucie Vacova", "b": "Nicole Berger", "r": "Einst. Entscheidung"}, {"a": "Matin Mubariz", "b": "Daniel Matusic", "r": "KO (Schläge) · R1 2:10"}, {"a": "Magomed Saraliev", "b": "Stefan Wagenknecht", "r": "Submission (Armbar) · R1 2:35"}, {"a": "Johann Ster", "b": "Toma Vlaovic", "r": "TKO (Leg Kicks & Schlag) · R1 0:12"}, {"a": "Dzhambulat Temirov", "b": "Hannes Schewe", "r": "Submission (RNC) · R3 2:57"}]}, {"num": 23, "date": "18. Feb. 2018", "city": "München", "venue": "Backstage", "title": "", "card": [{"a": "Andre Schmidt", "b": "Tassilo Lahr", "r": "Einst. Entscheidung", "main": true}, {"a": "Daniel Holl", "b": "Mikhail Zaipoulaiev", "r": "Mehrh. Entscheidung"}, {"a": "Robert Michlik", "b": "Vojta Veselovsky", "r": "TKO (Verletzung) · R1 2:19"}, {"a": "Magomed Tisaev", "b": "Andrej Hodakovski", "r": "Submission (RNC) · R2 3:50"}, {"a": "Fardin Gharibzadeh", "b": "Ashab Ahmadov", "r": "Einst. Entscheidung"}, {"a": "Steven Krt", "b": "Dzhambulat Temirov", "r": "KO (Schlag) · R1 1:03"}, {"a": "Ilias Doschlakiew", "b": "Max Friedrich", "r": "KO (Schlag) · R2 1:38"}, {"a": "Jan David", "b": "Domenico Farcito", "r": "Submission (Guillotine) · R1 1:49"}]}, {"num": 24, "date": "3. Juni 2018", "city": "München", "venue": "Backstage", "title": "Lightweight-Titel", "card": [{"a": "Lajos Etelaky", "b": "Pedro Henrique Santos", "r": "TKO (Schläge) · R2 4:08 · LW-Titel", "main": true}, {"a": "Andreas Hasselbacher", "b": "Christian Lochner", "r": "TKO (Schläge) · R1 1:36"}, {"a": "Johannes Ernstberger", "b": "Clemens Habich", "r": "KO (Knie zum Körper) · R2 1:41"}, {"a": "Martin Resch", "b": "Robat Froehlich", "r": "Submission (Guillotine) · R2 0:22"}, {"a": "Tim Schwabe", "b": "Konstantin Ogroske", "r": "KO (Head Kick & Schläge) · R1 1:55"}, {"a": "Taurus Kuskys", "b": "Farhad Maherzade", "r": "Einst. Entscheidung"}]}, {"num": 25, "date": "29. Sept. 2018", "city": "Salzburg", "venue": "Szene Salzburg", "title": "", "card": [{"a": "Wilhelm Ott", "b": "Robert Michlik", "r": "Submission (Armbar) · R1 3:38", "main": true}, {"a": "Kevin Graf", "b": "Vitor dos Santos", "r": "TKO (Schläge) · R1 3:40"}, {"a": "Hovhanes Markarian", "b": "Christian Lochner", "r": "Submission (Armbar) · R1 0:30"}, {"a": "Giulia Chinello", "b": "Nicole Berger", "r": "Einst. Entscheidung"}, {"a": "Farhad Maherzade", "b": "Marcel Pawlik", "r": "Submission (Guillotine) · R2 0:47"}, {"a": "Lukas Maxa", "b": "Pasi Chanderkant", "r": "Submission (RNC) · R1 2:07"}, {"a": "Nicola Cupic", "b": "Martin Strobl", "r": "TKO (Schläge) · R1 0:51"}, {"a": "Ion Voda", "b": "Fabian Sinzinger", "r": "TKO (Head Kick) · R1 2:50"}, {"a": "Richard Zehentleitner", "b": "Florian Niedermeyer", "r": "Submission (Arm-Triangle) · R1 1:22"}, {"a": "Igor Dereszweski", "b": "Lukas Imriko", "r": "Submission (RNC) · R1 1:53"}, {"a": "Magomed Seraliev", "b": "Taurus Kuskys", "r": "Submission (Triangle) · R2 1:10"}]}, {"num": 26, "date": "8. Dez. 2018", "city": "Ingolstadt", "venue": "Mayer Classic Cars", "title": "", "card": [{"a": "Lazar Todev", "b": "Kevin Graf", "r": "TKO (Schläge) · R1 3:34", "main": true}, {"a": "Mario Wittmann", "b": "Enrico Koch", "r": "KO (Head Kick) · R1 0:09"}, {"a": "Daniel Holl", "b": "Bashir Bashirov", "r": "KO (Schlag) · R1 3:47"}, {"a": "Ruslan Malsam", "b": "Christian Stephan", "r": "Submission (RNC) · R1 0:26"}, {"a": "Jean Phillip Berndt", "b": "Dzhambulat Temirov", "r": "Einst. Entscheidung"}, {"a": "Ion Voda", "b": "Abner Souza", "r": "KO (Head Kick) · R1 0:38"}, {"a": "Daniel Knabl", "b": "Igor Dereszweski", "r": "Submission (RNC) · R2 1:20"}, {"a": "Mark Pfeiffer", "b": "Johannes Ernstberger", "r": "Unentschieden (Split)", "draw": true}, {"a": "Taurus Kuskys", "b": "Timmy Bolliger", "r": "Einst. Entscheidung"}, {"a": "Maximilian Schatz", "b": "Alexander Schmidt", "r": "Submission (RNC) · R1 2:15"}]}, {"num": 27, "date": "10. Feb. 2019", "city": "München", "venue": "Reithalle", "title": "", "card": [{"a": "Andre Schmidt", "b": "Jakub Stepan", "r": "Submission (RNC) · R1 1:36", "main": true}, {"a": "Rahman Magamschapiev", "b": "Mirco Marogna", "r": "Submission (Guillotine) · R2 1:31"}, {"a": "Ali Isajew", "b": "Kevin Barth", "r": "Mehrh. Entscheidung"}, {"a": "Rasul Magamschapiev", "b": "Ali Aljarad", "r": "Submission (RNC) · R2 1:36"}, {"a": "Lukas Maxa", "b": "Farhad Maherzade", "r": "Submission (RNC) · R1 2:32"}, {"a": "Nicole Berger", "b": "Nadia Bertini", "r": "Submission (Armbar) · R1 2:03"}, {"a": "Christian Mach", "b": "Bernd Nikolaus", "r": "TKO (Schläge) · R2 2:35"}]}, {"num": 28, "date": "19. Mai 2019", "city": "Stuttgart", "venue": "LKA Longhorn", "title": "", "card": [{"a": "Walid Laidi", "b": "Daniel Holl", "r": "Einst. Entscheidung", "main": true}, {"a": "Iman Samarghandi", "b": "Arbias Kuci", "r": "Einst. Entscheidung"}, {"a": "Phillip Graf", "b": "Alireza Alipour", "r": "Einst. Entscheidung"}, {"a": "Djambulat Kulbuschev", "b": "Rahman Magamschapiev", "r": "Einst. Entscheidung"}, {"a": "Ali Isajew", "b": "Kevin Barth", "r": "Einst. Entscheidung"}, {"a": "Paul Braun", "b": "Muhammed Ali Talayhan", "r": "Unentschieden", "draw": true}, {"a": "Islam Hadchiev", "b": "Mihail Zilinski", "r": "Submission (Triangle) · R1 2:43"}, {"a": "Lukas Mayer", "b": "Dennis Sattler", "r": "TKO (Schläge) · R1 0:30"}]}, {"num": 29, "date": "26. Okt. 2019", "city": "Salzburg", "venue": "Szene Salzburg", "title": "", "card": [{"a": "Alexander Poppeck", "b": "Francisco de Souza", "r": "TKO (G&P) · R1 1:44", "main": true}, {"a": "Lazar Todev", "b": "Filip Bradaric", "r": "KO (Schläge) · R1 2:43"}, {"a": "Kevin Cekic", "b": "Florian Niedermeyer", "r": "Einst. Entscheidung"}, {"a": "Phillip Graf", "b": "Zokirjon Rafiew", "r": "Einst. Entscheidung"}, {"a": "Iman Samarghandi", "b": "Chris Kalb", "r": "Submission (RNC) · R2"}, {"a": "Enis Mehmetaj", "b": "Sami Ahmaev", "r": "Submission (Guillotine) · R2"}, {"a": "Aptiv Yusupov", "b": "Marcel Tratnik", "r": "TKO (Aufgabe) · R2 3:00"}, {"a": "Marcel Pawlik", "b": "Mateo Skopljak", "r": "TKO (Schläge) · R2"}, {"a": "Komron Rafiew", "b": "Christian Schmidt", "r": "Submission (Guillotine) · R1"}, {"a": "Magomed Arsaev", "b": "Jaroslav Dubanek", "r": "DQ (Illegaler Knie) · R1"}, {"a": "Ibragim Isaev", "b": "Thomas Gruszka", "r": "Einst. Entscheidung"}]}];
-  (function(){
-    const list=document.getElementById('allList'), back=document.getElementById('allBackdrop');
-    if(!list||!back) return;
-    function boutHTML(b){
-      const nc=/no contest/i.test(b.r||'');
-      const draw=!!b.draw||nc;
-      const bill=b.main?'<div class="bbill">&#9733; Hauptkampf</div>':'';
-      const clsA=draw?'draw':'win', clsB=draw?'draw':'loss';
-      const lblA=nc?'N/C':(draw?'Draw':'Win'), lblB=nc?'N/C':(draw?'Draw':'Loss');
-      const m=b.r?'<div class="method"><span>'+b.r+'</span></div>':'';
-      return '<div class="evbout">'+bill+'<div class="row">'+
-        '<div class="half left '+clsA+'"><span class="fname">'+b.a+'</span><span class="res '+clsA+'">'+lblA+'</span></div>'+
-        '<div class="seam"></div>'+
-        '<div class="half right '+clsB+'"><span class="fname">'+b.b+'</span><span class="res '+clsB+'">'+lblB+'</span></div>'+
-      '</div>'+m+'</div>';
-    }
-    function render(filter){
-      let evs=ALL_EVENTS.slice().sort((x,y)=>y.num-x.num);
-      if(filter&&filter!=='all') evs=evs.filter(e=>e.city===filter);
-      list.innerHTML=evs.map(e=>{
-        const main=e.card.find(c=>c.main);
-        const mt=main?(' — '+main.a+' vs. '+main.b):'';
-        const sub=e.date+' · '+e.city+' · '+e.venue+mt;
-        const note=e.note?'<p class="galanote">'+e.note+'</p>':'';
-        return '<div class="gala"><div class="galahd"><div class="galanum">'+e.num+'</div>'+
-          '<div class="galainfo"><div class="t">Aggrelin '+e.num+(e.title?' · '+e.title:'')+'</div><div class="s">'+sub+'</div></div>'+
-          '<div class="galachev">&#9656;</div></div>'+
-          '<div class="galabody">'+note+e.card.map(boutHTML).join('')+'</div></div>';
-      }).join('');
-      list.querySelectorAll('.galahd').forEach(h=>h.addEventListener('click',()=>h.parentElement.classList.toggle('open')));
-    }
-    const total=ALL_EVENTS.reduce((s,e)=>s+e.card.length,0);
-    document.getElementById('allMeta').textContent=ALL_EVENTS.length+' Galas · '+total+' Kämpfe · Bayern & Österreich';
-    // Stadt-Filterleiste
-    const cities=[...new Set(ALL_EVENTS.map(e=>e.city))];
-    const bar=document.createElement('div'); bar.className='allbar';
-    bar.innerHTML='<button class="active" data-f="all">Alle</button>'+cities.map(c=>'<button data-f="'+c+'">'+c+'</button>').join('');
-    list.parentNode.insertBefore(bar,list);
-    bar.addEventListener('click',ev=>{const b=ev.target.closest('button'); if(!b)return; bar.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active'); render(b.dataset.f);});
-    render('all');
-    function open(){back.classList.add('show');back.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
-    function close(){back.classList.remove('show');back.setAttribute('aria-hidden','true');document.body.style.overflow='';}
-    document.getElementById('allFightsBtn').addEventListener('click',open);
-    document.getElementById('allClose').addEventListener('click',close);
-    back.addEventListener('click',ev=>{if(ev.target===back)close();});
-    document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&back.classList.contains('show'))close();});
-  })();
 </script>
 </body>
 </html>
